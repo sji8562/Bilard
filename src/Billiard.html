@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Billiard Game</title>
+</head>
+<body style="margin: 0; height: 100%; overflow: hidden">
+<!--화면에 표시되게 크기값을 줌-->
+<style>
+
+    #canvas {
+        height: 30px;
+    }
+    #player_change {
+        float: left;
+        height: 30px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    #hit_btn {
+        float: left;
+        height: 30px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+    #myProgress {
+        float: left;
+        position: relative;
+        width: 400px;
+        height: 30px;
+        background-color: #ddd;
+        margin-bottom: 10px;
+    }
+    #myBar {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        background-color: #4CAF50;
+        margin-bottom: 10px;
+    }
+    #label {
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    span {
+        float: left;
+        color: lightgrey;
+        line-height: 30px;
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 50px;
+    }
+    #help_btn {
+        float: left;
+        height: 30px;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+    #p2 {
+        margin-right: 50px;
+    }
+    #help_btn {
+        margin-right: 10px;
+        width :40pt;
+    }
+</style>
+<!--점수 입력을 위한 alert 구현 -->
+<script type="text/javascript">
+    document.write(redata1);
+    document.write(redata2);
+</script>
+<div id="container">
+    <!--플레이어정보 구현-->
+    <span id="p1" style="color:dodgerblue; margin-left: 0px;">Player1 : 0</span> <span style="color:red">vs</span> <span id="p2">Player2 : 0</span>
+    <!--버튼 구현 -->
+    <button id="help_btn">도움말</button>
+    <button id="player_change">선수 교체</button>
+    <div id="myProgress"><!--게이지 바-->
+        <div id="myBar"><!--게이지 충전-->
+            <div id="label">0%</div>
+        </div>
+    </div>
+    <!--히트버튼 구현-->
+    <button id="hit_btn" style="width :60pt;">공을 친다</button>
+    <div id = "canvas">
+        <canvas>
+        </canvas>
+    </div>
+    <!--배경음악을 깐다-->
+    <audio style="position: absolute; right:0; bottom: 0;" src="../sounds/bgm.mp3" autoplay controls></audio>
+    <!--exampl.js와 event.js를 참조-->
+    <script src="example.js"></script>
+    <script src="event.js"></script>
+    <!--sweetalert를 사용하기 위해 받아옴-->
+    <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js" > </script>
+
+
+</div>
+</body>
+</html>
